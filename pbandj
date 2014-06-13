@@ -1,0 +1,108 @@
+#create variables
+bread=6
+pb=3
+jelly=3
+#must make a variable called sandwich that ==1 because the loop will add on to that
+#dont make this sandwich=0 because then the loop will start counting at 0. so...type "sandwich=1"
+sandwich=1
+
+#say that while bread is more than 2, pb is more than 1 and jelly more than 1 
+#write making sandwich, which will use 2 slices of bread(type: bread-2), 1 pb(type: pb-1), and 1 jelly(type: jelly-1), but make 1 sandwich(type:sandwhich +1)
+while bread >=2 and pb >=1 and jelly >=1:
+    print 'Making sandwich #{0}'.format(sandwich)
+    bread= bread -2
+    pb= pb - 1
+    jelly= jelly-1
+    sandwich= sandwich +1
+    
+#new loop....if pb is 0 then
+#there is an ingredient called peanut butter that we need for the sententce that will be printed
+#if jelly=0 then there is an ingredient called jelly that will go in the sentence that will be printed
+if pb == 0:
+    ingredient = "peanut butter"
+elif jelly == 0:
+    ingredient = "jelly"
+elif bread == 0:
+    ingredient = "bread"
+
+
+#how to: be fancy and write an if loop for the plural of sandwich
+# this will make the 3rd, or according to python 2nd, variable that goes in the final sentence
+#so don't forget to add it as {2} and put it in the format part.
+
+if sandwich> 2:
+    plural ="es"
+else:
+    plural=""
+
+   
+#say print a sentence that tells us the following
+print "Only had enough {0} for {1} sandwich{2}.".format(ingredient,sandwich-1,plural)
+
+#####more fancy######
+#write loop using % which will give you the remainder from division
+#so if you type 7%2 python will tell you "1"
+bread=3
+pb=3
+jelly=3
+sandwich=1
+
+while bread >=2 and pb >=1 and jelly >=1:
+    print 'Making sandwich #{0}'.format(sandwich)
+    bread= bread-2
+    pb= pb - 1
+    jelly= jelly-1
+    sandwich= sandwich +1
+
+    if bread % 2 !=0 and jelly%2 !=0 and pb%2 !=0:
+        print "you have enough"
+    else:
+        print "you don't have enough"
+
+
+# Goal #2: Modify that program to say how many sandwiches-worth of each ingredient remains.
+
+# Example 2:
+# Output:
+# Making sandwich #1
+# I have enough bread for 4 more sandwiches, enough peanut butter for 9 more, and enough jelly for 3 more.
+# Making sandwich #2
+# I have enough bread for 3 more sandwiches, enough peanut butter for 8 more, and enough jelly for 2 more.
+# Making sandwich #3
+# I have enough bread for 2 more sandwiches, enough peanut butter for 7 more, and enough jelly for 1 more.
+# Making sandwich #4
+# All done; I ran out of jelly.
+
+#create variables
+bread = 4
+pb = 2
+jelly = 2
+
+#here do sandwich=0 rather than sandwich=1 like above. notice change in format statement below.
+#you need to do in format sandwich+1, not just sandwich
+#review sandwich=1 goes w/ format sandwich, and sandwich=0 goes w/format sandwich+1
+# must know b/c influences how python counts in the loop
+
+sandwich=0
+
+#below says make sandwiches while
+#i have more than or equal to 1 pb serving, more than 0 bread, and more than or equal to 1 jelly serving
+while pb>=1 and bread>0 and jelly>=1:
+    print 'making sandwich {0}, enough jelly for {1} more, enough pb for {2} more, enough bread for{3} more'.format(sandwich+1,jelly-1,pb-1,bread)
+    bread=bread-2
+    pb=pb-1
+    jelly=jelly-1
+    sandwich=sandwich+1
+
+#run out of things
+    if bread<=1:
+        print "not enough bread left"
+    if pb==0:
+        print"no more pb"
+    if jelly==0:
+        print"no more jelly :("
+
+print "Now I have {0} jelly, but still have enough bread for {1} sandwiches and enough pb for {2} sandwiches.".format(jelly,bread,pb)
+
+print "all done"
+
