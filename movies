@@ -1,0 +1,14 @@
+
+#step 1: make lists of movies and related info
+movie_title=["clueless", "the breakfast club", "the devil wears prada", "the september issue", "sex and the city"]
+parental_rating=["pg-13","r","pg-13","pg-13","r"]
+bechdel_rating=[3, "no results", "no results", "no results", 3] 
+imdb_rating=[6.7, 7.9,6.8,7,5.4]
+genre=["comedy", "comedy", "comedy", "documentary", "comedy"]
+
+#step 2: make a loop: format follows. each number corresponds to a list. zipping puts the lists together and reshapes the values so it prints neatly
+for movie_title, parental_rating, bechdel_rating, imdb_rating, genre in zip(movie_title, parental_rating, bechdel_rating, imdb_rating, genre):
+    print "{0}, {1}, {2}, {3}, {4}".format(movie_title, parental_rating, bechdel_rating, imdb_rating, genre)
+    
+#step 3: save as movies.csv and open in excel each value should have its own cells becuase of the commas
+#save yourself a lot of time by not transposing the d and the b in imbd anytime its mentioned... you'll get an error and you'll wonder whats wrong
